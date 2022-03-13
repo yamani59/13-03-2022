@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap')
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  overflow-x: hidden
+  font-family: 'Source Sans Pro', sans-serif
+
+.container
+  background-color: #e9e9e9
+
+.navbar-wrapper
+  position: fixed
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 0.5em 2em
+  transition: all 0.5s
+  z-index: 9999
+  .navbar-logo
+    color: white
+    font-size: 30px
+    font-family: 'Inter', sans-serif
+    transition: all 0.5s
+  .navbar-menu
+    a
+      margin-right: 20px
+      font-size: 23px
+      color: #258541
+      text-decoration: none
+.navbar-menu-list
+  visibility: hidden
+  position: absolute
+  display: flex
+  flex-direction: column  
+  background: #fff
+  width: 25%
+  height: 200px
+  .list
+    a
+      color: black
+      text-decoration: none
+
+.banner-wrapper
+  position: relative
+  z-index: 10
+  width: 100%
+  display: flex
+  justify-content: center
+  align-content: stretch
+  padding: 3em
+  background: url('../assets/bg.png')
+  background-repeat: no-repeat
+  background-size: contain
+  height: 100vh
+  .banner-text
+    margin-top: 13%
+    .banner-title
+      font-size: 20pt
+      font-family: 'Sansita Swashed', cursive
+    color: white
+    .button
+      margin-top: 10%
+      text-align: center
+      background: white
+      width: 40%
+      border: 2px solid #258541 
+      border-radius: 20px
+      padding: 0.5em
+      font-size: 30px 
+      color: #258541
+  .button:hover
+    background-color: #258541
+    color: white
+    cursor: pointer
+    border: 2px solid white
+  img
+    width: 50%
+
+.answere-wrapper
+  width: 100%
+  padding: 3em
+  display: grid
+  flex-direction: column
+  justify-content: center
+  .answere-top
+    justify-self: center
+    h1
+      font-family: 'Inter', sans-serif
+    span
+      color: #258541
+    h1, p
+      text-align: center
+  .answere-fasilitas
+    display: flex
+    justify-content: space-between
+    .fasilitas
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin: 1em
+      padding: 1em
+      background-color: #fff
+      border: 1px solid black
+      height: 18em
+      box-shadow: -2px -2px 10px -5px black
+      transition: all 0.5s
+      i, h3, p
+        text-align: center
+      i
+        font-size: 35pt
+        color: #cccccc
+        margin: 0.3em
+        
+      h3
+        font-size: 25pt
+        font-family: 'Inter', sans-serif
+    .fasilitas:hover
+      background-color: #258541
+      background-image: url('../assets/card.png')
+      i, h3, p
+        color: white
+      h3
+        color: black
+
+.master-school
+  display: flex
+  background: white
+  .master
+    img
+      width: 90%
+  .master-desc
+    padding: 0 5em 0em 0em
+    margin-top: 5%
+    h1
+      font-size: 35pt
+      font-family: 'Inter', sans-serif
+    span
+      color: #258541
+    h3
+      color: #258541
+      margin-bottom: 8%
+      font-size: 28px
+    p
+      font-size: 20px
+    .kepala
+      margin: 2em 0
+    
+    .buttom
+      background: #258541
+      color: white
+      border: 1px solid #258541
+      transition: all 0.5s
+      padding: 1em
+      border-radius: 15px
+      text-decoration: none
+    .buttom:hover
+      background: white
+      color: #258541
+.master-school > div
+  flex: 1
+
+.news-wrapper
+  overflow: hidden
+  background: #eeeeee
+  padding: 3em
+  z-index: 3
+  .news-top
+    text-align: center
+    padding: 3em
+    span
+      color: #258541
+    p
+      padding: 0 5em
+  .news-cards
+    display: flex
+    justify-content: space-evenly
+    .news
+      padding: 0 1em
+      .news-img
+        position: relative
+        .img-hover
+          // display: none
+          position: absolute
+          width: 100%
+          height: 100%
+          background-color: #258541
+        height: 250px
+        overflow: hidden
+        img
+          position: relative
+          height: 250px
+          transition: all 0.5s
+      .news-img:hover
+        .img-hover
+          display: block
+        img
+          transform: rotate(20deg) scale(2,2)
+
+.qoutes-wrapper
+  padding: 3em
+  background: white
+  display: flex
+  justify-content: center
+  .qoutes
+    width: 400px
+    text-align: center
+    p
+      font-size: 25pt
+
+.footer-wrapper
+  background: #3d3d3d
+  height: 20vh
+  display: flex
+  justify-content: center
+  a
+    font-size: 20pt
+    color: white
+    align-self: center
+    .fab
+      margin: 0 1em
+      align-self: center
+      background: #636363
+      padding: 0.5em
+      border-radius: 50px
