@@ -23,6 +23,8 @@
     font-size: 30px
     font-family: 'Inter', sans-serif
     transition: all 0.5s
+  .navbar-mn
+    display: none
   .navbar-menu
     a
       margin-right: 20px
@@ -30,13 +32,11 @@
       color: #258541
       text-decoration: none
 .navbar-menu-list
-  visibility: hidden
-  position: absolute
-  display: flex
-  flex-direction: column  
-  background: #fff
-  width: 25%
-  height: 200px
+  position: relative
+  display: none
+  background: red
+  width: 100%
+  z-index: 10
   .list
     a
       color: black
@@ -50,9 +50,10 @@
   justify-content: center
   align-content: stretch
   padding: 3em
-  background: url('../assets/bg.png')
+  background: url('../assets/bg1.png')
   background-repeat: no-repeat
-  background-size: contain
+  background-position: center
+  background-size: cover
   height: 100vh
   .banner-text
     margin-top: 13%
@@ -79,11 +80,14 @@
     width: 50%
 
 .answere-wrapper
+  position: relative
+  z-index: 10
   width: 100%
   padding: 3em
   display: grid
   flex-direction: column
   justify-content: center
+  background: #e9e9e9
   .answere-top
     justify-self: center
     h1
@@ -125,6 +129,8 @@
         color: black
 
 .master-school
+  position: relative
+  z-index: 10
   display: flex
   background: white
   .master
@@ -162,10 +168,11 @@
   flex: 1
 
 .news-wrapper
+  position: relative
   overflow: hidden
   background: #eeeeee
   padding: 3em
-  z-index: 3
+  z-index: 10
   .news-top
     text-align: center
     padding: 3em
@@ -199,18 +206,73 @@
           transform: rotate(20deg) scale(2,2)
 
 .qoutes-wrapper
-  padding: 3em
+  position: relative
   background: white
+  height: 40vh
   display: flex
   justify-content: center
+  .bg
+    position: fixed
+    top: 0
+    width: 100%
+    height: 100%
+    background: url('../assets/card.png')
+    
   .qoutes
+    position: absolute
     width: 400px
+    align-self: center
     text-align: center
+    z-index: 3
+    color: white
     p
+      font-weight: 900
       font-size: 25pt
 
+.gallery-wrapper
+  background: #fff 
+  position: relative
+  z-index: 10
+  padding: 3em
+  h1
+    font-size: 30pt
+    text-align: center
+    span
+      color: #258541
+  .galleres  
+    padding: 4em
+    height: 100vh
+    display: grid
+    gap: 10px
+    grid-template-areas: "a a b c" "a a d e" "f g h i" "j k l m"
+    img
+      width: 100%
+      height: 100%
+      border: 1px solid black
+    .five
+      grid-area: a
+    .one
+      grid-area: b
+    .two
+      grid-area: c
+    .three
+      grid-area: d
+    .four
+      grid-area: e
+    .siz
+      grid-area: f
+    .seven
+      grid-area: g
+    .eight
+      grid-area: h
+    .nine
+      grid-area: i
+  .galleres>img
+    background: red
 .footer-wrapper
   background: #3d3d3d
+  position: relative
+  z-index: 10
   height: 20vh
   display: flex
   justify-content: center
@@ -224,3 +286,66 @@
       background: #636363
       padding: 0.5em
       border-radius: 50px
+
+@media only screen and (max-width: 400px)
+  .navbar-wrapper
+    .navbar-menu
+      display: none
+    .navbar-mn
+      display: block
+      color: white
+      align-self: center
+      font-size: 25pt
+  
+  .navbar-menu-list
+    display: none
+    position: fixed
+    background: white
+    top: 3.8em
+    border: 1px solid black
+    text-align: center
+    z-index: 999
+    transition: all 0.5s
+    .list:hover
+      a
+        color: #258541
+
+  .banner-wrapper
+    flex-direction: column
+    background: #258541
+    text-align: center
+    justify-content: center
+    .banner-text
+      .button
+        width: 100%
+    img
+      width: 100%
+
+  .answere-wrapper
+    .answere-fasilitas
+      flex-direction: column
+  
+  .master-school
+    flex-direction: column-reverse
+    justify-content: center
+    .master-desc
+      padding: 2em
+      text-align: center
+      overflow: hidden
+
+  .news-wrapper
+    padding: 1em
+    .news-top
+      text-align: center
+      padding: 0
+    .news-cards
+      flex-direction: column
+      .news
+        margin: 1em 0
+
+  .gallery-wrapper
+    .galleres
+      display: flex
+      flex-direction: column
+      padding: 0
+      height: 100%
